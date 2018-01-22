@@ -42,11 +42,12 @@ if (
   }
 
   function handleText(textNode, Alternate) {
+    console.log(textNode, Alternate);
     AlternateVal = function() {
       if (Alternate) {
         return Alternate;
       } else {
-        return "ChangeMe";
+        return "Very Stable Genius";
       }
     };
     var v = textNode.nodeValue;

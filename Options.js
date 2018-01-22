@@ -1,6 +1,6 @@
 chrome.storage.sync.get("value", function(obj) {
   if (!chrome.runtime.error) {
-    obj.value = obj.value || "default";
+    obj.value = obj.value || "Very Stable Genius";
     document.getElementById("replacedText").value = obj.value;
   }
 });
@@ -48,6 +48,8 @@ function loadQoutes() {
     document.getElementById("author").textContent =
       responseJSON._embedded.author[0].name;
     document.getElementById("source").textContent =
+      responseJSON._embedded.source[0].url;
+    document.getElementById("source").href =
       responseJSON._embedded.source[0].url;
     //console.log("response", responseJSON);
   });
